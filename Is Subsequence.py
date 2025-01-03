@@ -5,6 +5,7 @@ class Solution(object):
         :type t: str
         :rtype: bool
         """
+        # Method 1:
         # Create a copy of t to track remaining characters as we check subsequence
         t_copy = t[:]
         
@@ -22,3 +23,17 @@ class Solution(object):
         
         # If all characters of s are found in order, return True
         return True
+
+        # Method 2: (Better Time Complexity)
+        # Two pointers: one for s and one for t
+        s_index, t_index = 0, 0
+
+        while s_index < len(s) and t_index < len(t):
+            # If characters match, move the s pointer
+            if s[s_index] == t[t_index]:
+                s_index += 1
+            # Always move the t pointer
+            t_index += 1
+
+        # If we've gone through all characters in s, it's a subsequence
+        return s_index == len(s) 
