@@ -20,5 +20,8 @@ git clone https://github.com/alireza-dashchi/LeetCode-Solutions.git
 - Trees
 - And more...
 
+## License
+This project is licensed under the MIT License.
+
 ## Contributions
 Feel free to open an issue or a pull request if you find any improvements or want to add new solutions!
